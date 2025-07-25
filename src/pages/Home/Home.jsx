@@ -1,13 +1,23 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+import "./Home.css";
+import Hero from "./Hero";
+import MaterialJourney from "./MaterialJourney";
+import Intro from "./Intro";
+import Feature from "./Feature";
+import Testimonial from "./Testimonial";
+import Newsletter from "./Newsletter";
+
 
 function Home() {
   return (
-    <div className="home-page">
-      <h1>Welcome to Upcycled Furniture</h1>
-      <p>This is the homepage.</p>
-    </div>
-    
+    <>
+      <Hero />
+      <Intro />
+      <MaterialJourney />
+      <Feature />
+      <Testimonial />
+      <Newsletter />
+    </>
   );
 }
 

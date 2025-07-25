@@ -1,0 +1,181 @@
+/* ===============================
+   Upcycling Journey: Map Style
+================================== */
+
+
+.material-section {
+  padding: 4rem 2rem;
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.material-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  color: #2b2b2b;
+  margin-top: 1rem;
+  margin-bottom: -4rem;
+  
+}
+
+
+.map-journey {
+  position: relative;
+  margin-top: 5rem;
+  padding: 2rem 0;
+}
+
+
+.map-step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 3rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.map-step.left {
+  flex-direction: row;
+  padding-left: 10%;
+}
+
+.map-step.right {
+  flex-direction: row-reverse;
+  padding-right: 10%;
+}
+
+
+.map-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #6e4d3c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.map-content {
+  background-color: #f3ece4;
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 0 1.5rem;
+  width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.map-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-content h3 {
+  font-size: 1.4rem;
+  font-family: 'DM Serif Display', serif;
+  margin-bottom: 0.4rem;
+  color: #2b2b2b;
+}
+
+.map-content p {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.map-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+
+/* ============================
+   Responsive Styles
+============================ */
+
+@media (max-width: 768px) {
+  .material-heading {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    line-height: 32px;
+    margin-bottom: 0.6rem;
+  }
+
+  .map-step {
+    flex-direction: column !important;
+    padding: 0 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .map-content {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .map-content img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .map-content h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #6e4d3c;
+  }
+
+  .map-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .map-line {
+    display: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .material-heading {
+    font-size: 1.8rem;
+  }
+
+  .map-content img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .map-content p {
+    font-size: 0.85rem;
+  }
+}

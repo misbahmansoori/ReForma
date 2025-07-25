@@ -1,0 +1,144 @@
+
+
+/* Section Styling */
+.featured-section {
+  margin-top: -4rem;
+  padding: 5rem 2rem;
+  background: #e8dfd3;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+.featured-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  color: #2b2b2b;
+  margin-bottom: 3rem;
+}
+
+/* Slider & Card Styling */
+.slide-wrapper {
+  padding: 1rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transform: scale(0.85);
+  filter: blur(1px) grayscale(30%);
+  opacity: 0.7;
+}
+
+.slick-center .slide-wrapper {
+  transform: scale(1.05);
+  filter: none;
+  opacity: 1;
+}
+
+.slide-card {
+  background-color: #f2e8de;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.slide-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.slide-text {
+  padding: 1.2rem;
+}
+
+.slide-text h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  color: #2b2b2b;
+}
+
+.slide-text p {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Dots Styling */
+.slick-dots li button:before {
+  color: #b19174;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #c4a484;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #b19174;
+  color: #fffaf5;
+  border-radius: 50%;
+  padding: 0.5rem;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: #c4a484;
+}
+
+.prev-arrow {
+  left: -30px;
+}
+
+.next-arrow {
+  right: -30px;
+}
+
+/* View All Button */
+.view-all-btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  background-color: #b19174;
+  color: #fffaf5;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #c4a484;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide-wrapper {
+    transform: scale(1) !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .slide-card {
+    max-width: 90%;
+  }
+
+  .slide-img {
+    height: 200px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .featured-heading {
+    font-size: 2rem;
+  }
+}
