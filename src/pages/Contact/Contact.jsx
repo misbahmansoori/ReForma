@@ -1,39 +1,43 @@
-import { useState } from 'react';
-import './Contact.css';
+import { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    idea: ''
+    name: "",
+    email: "",
+    message: "",
+    idea: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [ideas, setIdeas] = useState([
-    { id: 1, text: "Create a furniture piece from old bicycle parts", likes: 12 },
+    {
+      id: 1,
+      text: "Create a furniture piece from old bicycle parts",
+      likes: 12,
+    },
     { id: 2, text: "Upcycle wooden pallets into modular shelving", likes: 8 },
-    { id: 3, text: "Transform vintage suitcases into pet beds", likes: 15 }
+    { id: 3, text: "Transform vintage suitcases into pet beds", likes: 15 },
   ]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulate form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
     setFormData({
-      name: '',
-      email: '',
-      message: '',
-      idea: ''
+      name: "",
+      email: "",
+      message: "",
+      idea: "",
     });
   };
 
@@ -43,16 +47,16 @@ const Contact = () => {
       const newIdea = {
         id: Date.now(),
         text: formData.idea,
-        likes: 0
+        likes: 0,
       };
-      setIdeas(prev => [newIdea, ...prev]);
-      setFormData(prev => ({ ...prev, idea: '' }));
+      setIdeas((prev) => [newIdea, ...prev]);
+      setFormData((prev) => ({ ...prev, idea: "" }));
     }
   };
 
   const handleLike = (id) => {
-    setIdeas(prev =>
-      prev.map(idea =>
+    setIdeas((prev) =>
+      prev.map((idea) =>
         idea.id === id ? { ...idea, likes: idea.likes + 1 } : idea
       )
     );
@@ -62,8 +66,10 @@ const Contact = () => {
     <div className="contact-page">
       <main className="contact-container">
         <h1>Get in Touch with ReForma</h1>
-        <p className="subtitle">Share your thoughts, questions, or upcycling ideas with our community</p>
-        
+        <p className="subtitle">
+          Share your thoughts, questions, or upcycling ideas with our community
+        </p>
+
         <div className="contact-sections">
           <section className="contact-form-section">
             <h2>Contact Us</h2>
@@ -105,14 +111,19 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn">Send Message</button>
+              <button type="submit" className="submit-btn">
+                Send Message
+              </button>
             </form>
           </section>
 
           <section className="idea-sharing-section">
             <h2>Share Your Upcycling Ideas</h2>
-            <p>Have a creative idea for repurposing materials? Share it with our community!</p>
-            
+            <p>
+              Have a creative idea for repurposing materials? Share it with our
+              community!
+            </p>
+
             <form onSubmit={handleIdeaSubmit} className="idea-form">
               <div className="form-group">
                 <label htmlFor="idea">Your Idea</label>
@@ -125,7 +136,9 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn">Share Idea</button>
+              <button type="submit" className="submit-btn">
+                Share Idea
+              </button>
             </form>
 
             <div className="ideas-list">
@@ -134,12 +147,12 @@ const Contact = () => {
                 <p>No ideas shared yet. Be the first!</p>
               ) : (
                 <ul>
-                  {ideas.map(idea => (
+                  {ideas.map((idea) => (
                     <li key={idea.id} className="idea-item">
                       <p className="idea-text">{idea.text}</p>
                       <div className="idea-footer">
-                        <button 
-                          onClick={() => handleLike(idea.id)} 
+                        <button
+                          onClick={() => handleLike(idea.id)}
                           className="like-btn"
                           aria-label="Like this idea"
                         >
