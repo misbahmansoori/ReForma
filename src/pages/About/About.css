@@ -1,0 +1,58 @@
+/* About Page Styles */
+.about-page {
+  font-family: 'Outfit', sans-serif;
+  color: #2B2B2B;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb p {
+  margin: 0;
+  color: #666;
+}
+
+.breadcrumb strong {
+  color: #B19174;
+}
+
+/* Page Header */
+.page-header {
+  background-color: #B19174;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: 'DM Serif Display', serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+}
