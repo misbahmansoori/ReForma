@@ -22,12 +22,12 @@ function MaterialJourney() {
     {
       title: "Dismantling & Cleaning",
       description: "We carefully take apart and deep-clean every piece.",
-      image: "/assets/step2.jpg",
+      image: "/assets/assembling.png",
     },
     {
       title: "Painting & Assembly",
       description: "Fresh paint, polish, and detailed assembling.",
-      image: "/assets/step3.jpg",
+      image: "/assets/painting.png",
     },
     {
       title: "After",
