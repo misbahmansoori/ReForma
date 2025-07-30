@@ -27,7 +27,7 @@ function Hero() {
         <p className="hero-subtext">
           Explore our curated collection of handcrafted furniture made from recycled materials.
         </p>
-        <a href="#product" className="hero-btn">Shop Now</a>
+        <a href="/products" className="hero-btn">Shop Now</a>
       </div>
       <div className="scroll-indicator">
   <svg width="24" height="24" fill="#1b1005ff" xmlns="http://www.w3.org/2000/svg">

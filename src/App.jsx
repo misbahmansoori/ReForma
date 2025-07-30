@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Pages
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Product from './pages/Product/Product';
+import Product from './pages/Product/Product.jsx';
 import Contact from './pages/Contact/Contact';
-import Learn from './pages/Learn/Learn';
+import ProductDetails from "./pages/Product/ProductDetails"; // 👈 Add this line
 
 // Components
 import Navbar from './components/Navbar/Navbar';
@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/learn" element={<Learn />} />
+        <Route path="/product/:id" element={<ProductDetails />} /> {/* 👈 Add this line */}
       </Routes>
       <Footer />
     </Router>

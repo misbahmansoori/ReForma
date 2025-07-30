@@ -25,7 +25,6 @@ function Navbar() {
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/products">Shop</a>
-        <a href="/learn">DIY</a>
         <a href="/contact">Share</a>
       </div>
       <button

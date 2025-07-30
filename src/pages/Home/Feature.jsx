@@ -6,30 +6,27 @@ import "./Feature.css";
 
 const projects = [
   {
-    title: "Retro Bookshelf",
-    image: "/assets/step4.png",
+    title: "Reclaimed Bookshelf",
+    image: "/images/bookshelf.jpg",
     description: "An old cabinet reborn as a stunning minimalist bookshelf",
   },
   {
-    title: "Rustic Coffee Table",
-    image: "/assets/step4.png",
-    description: "Crafted from reclaimed wood, ideal for cozy corners.",
+    title: "Dining Table",
+    image: "/images/dining.jpg",
+    description: "An elegant dining table crafted from salvaged oak doors.",
   },
   {
-    title: "Pastel Chair Set",
-    image: "/assets/step4.png",
-    description: "Chairs painted in calming tones with modern aesthetics",
+    title: "Side Table",
+    image: "/images/sidetable.jpg",
+    description: "Compact side table created from leftover wood crates.",
   },
-  {
-    title: "Vintage Mirror Frame",
-    image: "/assets/step4.png",
-    description: "From scrap wood to a charming rustic wall frame.",
-  },
-  {
-    title: "Palette Shoe Rack",
-    image: "/assets/step4.png",
-    description: "Old wooden pallets turned into modern storage.",
-  },
+];
+
+// Clone last and first for buffer
+const visibleProjects = [
+  projects[projects.length - 1],
+  ...projects,
+  projects[0],
 ];
 
 const PrevArrow = ({ onClick }) => (
@@ -52,6 +49,7 @@ const Feature = () => {
     centerMode: true,
     centerPadding: "0px",
     slidesToShow: 3,
+    initialSlide: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
@@ -74,7 +72,7 @@ const Feature = () => {
       <h2 className="featured-heading">Featured Projects</h2>
 
       <Slider {...settings}>
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div key={index} className="slide-wrapper">
             <div className="slide-card">
               <img src={project.image} alt={project.title} className="slide-img" />
